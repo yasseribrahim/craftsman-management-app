@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "909092078018",
+    "firebase_url": "https://stay-at-home-app.firebaseio.com",
+    "project_id": "stay-at-home-app",
+    "storage_bucket": "stay-at-home-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909092078018:android:d2f8ad2978eae9333bd65b",
+        "android_client_info": {
+          "package_name": "com.orders.management.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909092078018-vq62b1qj8lhrr6ul8sl1ii3gf1coqp25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ0K4UbdBkjWOUrGO0hR9v5MbHTiunbro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909092078018-vq62b1qj8lhrr6ul8sl1ii3gf1coqp25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

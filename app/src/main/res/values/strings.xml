@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name" translatable="false">Orders Management</string>
+    <string name="str_welcome_message">Welcome: %s</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_admins">Admins</string>
+    <string name="menu_events">Events</string>
+    <string name="menu_events_accepted">Events Accepted</string>
+    <string name="menu_events_created">My Events</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_correction">Correction</string>
+    <string name="menu_units">Units</string>
+    <string name="menu_lessons">Lessons</string>
+    <string name="menu_students">Students</string>
+    <string name="menu_courses">Courses</string>
+    <string name="menu_exams">Exams</string>
+    <string name="menu_questions">Questions</string>
+    <string name="menu_more">More</string>
+
+    <string name="str_exam_list">Exams List</string>
+    <string name="str_exams_solved_list">Solved Exams</string>
+    <string name="str_questions_solved">Questions Solved</string>
+
+    <string name="str_course">Course</string>
+    <string name="str_course_hint">Select Course</string>
+    <string name="str_name">Name</string>
+
+    <string name="str_correction">Correction</string>
+    <string name="str_correct_answer">Correct Answer</string>
+    <string name="str_save">Save</string>
+    <string name="str_register">Register</string>
+    <string name="str_unregister">Cancel Register</string>
+    <string name="str_save_next">Save &amp; Next</string>
+    <string name="str_back">Back</string>
+    <string name="str_finish">Finish</string>
+    <string name="str_enter_value">Enter Value</string>
+    <string name="str_invalid_entered_value">Value invalid or already exist</string>
+    <string name="str_ok">Ok</string>
+    <string name="str_cancel">Cancel</string>
+    <string name="str_reset">Reset</string>
+    <string name="str_message_request_camera_and_storage">يحتاج هذا التطبيق إلى الوصول إلى الكاميرا ومساحة التخزين الخاصة بك حتى تتمكن من التقاط الصور.</string>
+
+    <string name="str_message_added_successfully">Added Successfully</string>
+    <string name="str_message_updated_successfully">Updated Successfully</string>
+    <string name="str_message_delete_successfully">Deleted Successfully</string>
+
+    <string name="str_title_add_update">Add / Update</string>
+    <string name="str_chat_edit_text_hint">Enter your message</string>
+    <string name="str_loading">Loading...</string>
+    <string name="str_empty_data">Not Found Data</string>
+    <string name="str_login">Login</string>
+    <string name="str_delete">Delete</string>
+    <string name="str_add_new">Add New</string>
+    <string name="str_review">Review</string>
+    <string name="str_search_hint">Search</string>
+    <string name="str_registration">Registration</string>
+    <string name="str_forget_password"><u>Forget Password</u></string>
+    <string name="str_please_wait">Please Wait...</string>
+    <string name="chat_edit_text_hint">Type Message...</string>
+    <string name="str_please_type_message_firstly">Please type message firstly</string>
+
+    <string name="str_password_length_invalid">Password Invalid Length, Password Must Be At Least 6 Digits</string>
+    <string name="str_password_confirm_invalid">Confirm Password Invalid</string>
+    <string name="str_full_name_invalid">Full Name Invalid</string>
+    <string name="str_name_invalid">Name Invalid</string>
+    <string name="str_phone_invalid">Phone Invalid</string>
+    <string name="str_address_invalid">Address Invalid</string>
+    <string name="str_grade_invalid">Grade Invalid</string>
+    <string name="str_signup_fail">SignUp Fail: %s</string>
+    <string name="str_save_fail">Save Fail: %s</string>
+    <string name="str_invalid_username_or_password">Invalid username or password</string>
+    <string name="str_login_successful">Login Successful</string>
+    <string name="str_username_invalid">Invalid Username</string>
+
+    <string name="str_score_pass_formatted">Pass %s</string>
+    <string name="str_score_total_formatted">Total %s</string>
+    <string name="str_questions_formatted">Questions: %s</string>
+
+    <string name="str_title_exam">Exam</string>
+    <string name="str_total_score">Total Score</string>
+    <string name="str_total_score_hint">Enter Total Score</string>
+    <string name="str_pass_score">Pass Score</string>
+    <string name="str_pass_score_hint">Enter Pass Score</string>
+    <string name="str_is_active">Active</string>
+    <string name="str_questions_list">Questions</string>
+    <string name="str_questions_list_hint">Please Select List Of Questions</string>
+    <string name="str_question_list_empty">Please select Grade and Course firstly</string>
+
+    <string name="str_title_event">Event</string>
+    <string name="str_title">Title</string>
+    <string name="str_register_users">User Register</string>
+    <string name="str_title_hint">Enter Title</string>
+    <string name="str_description">Description</string>
+    <string name="str_description_hint">Enter Description</string>
+    <string name="str_date">Date</string>
+    <string name="str_date_hint">Select Date</string>
+    <string name="str_time">Time</string>
+    <string name="str_time_hint">Select Time</string>
+    <string name="str_location"><u>Location From Maps</u></string>
+    <string name="str_question_type">Event Type</string>
+    <string name="str_question_type_hint">Select Event Type</string>
+    <string name="str_question_multi_choices">Choices</string>
+    <string name="str_question_multi_choices_hint">Fill Choices</string>
+
+    <string name="str_username">Username</string>
+    <string name="str_password">Password</string>
+    <string name="str_password_confirm">Password Confirm</string>
+    <string name="str_full_name">Full Name</string>
+    <string name="str_phone">Phone</string>
+    <string name="str_address">Address</string>
+    <string name="str_grade">Grade</string>
+    <string name="str_grade_hint">Select Grade</string>
+    <string name="str_username_hint" translatable="false">user@example.com</string>
+    <string name="str_password_hint">Enter your password</string>
+    <string name="str_default_password" translatable="false">12345678</string>
+    <string name="str_password_confirm_hint">Enter Password Confirm</string>
+    <string name="str_full_name_hint">Enter Full Name</string>
+    <string name="str_name_hint">Enter Name</string>
+    <string name="str_phone_hint">Enter Phone</string>
+    <string name="str_address_hint">Enter Address</string>
+    <string name="str_email">Email</string>
+    <string name="str_email_invalid">Email Invalid</string>
+
+    <string name="str_account_type_admin">Administrator</string>
+    <string name="str_account_type_craftsman">Craftsman</string>
+    <string name="str_account_type_client">Client</string>
+
+    <string name="str_more_profile">Profile</string>
+    <string name="str_more_about">About</string>
+    <string name="str_more_app_info">App Info</string>
+    <string name="str_more_change_language">Change Language</string>
+    <string name="str_more_language">العربية</string>
+    <string name="str_more_logout">Logout</string>
+
+    <string name="str_about_content">Content:</string>
+    <string name="str_about_conditions">The conditions:</string>
+    <string name="str_about_objectives">Objectives:</string>
+    <string name="str_about_content_hint_ar">Arabic Content</string>
+    <string name="str_about_conditions_hint_ar">Arabic Conditions</string>
+    <string name="str_about_objectives_hint_ar">Arabic Objectives</string>
+    <string name="str_about_content_hint_en">English Content</string>
+    <string name="str_about_conditions_hint_en">English Conditions</string>
+    <string name="str_about_objectives_hint_en">English Objectives</string>
+
+    <string name="str_back_to_home">Back to Home</string>
+    <string name="str_change_avatar"><u>Change Avatar</u></string>
+    <string name="str_account_info">Account Info</string>
+    <string name="str_account_info_edit">Edit Account Info</string>
+    <string name="str_edit">Edit</string>
+    <string name="str_accept">Accept</string>
+
+    <string name="str_question_type_multi_choices">Multi Choices</string>
+    <string name="str_question_type_article">Article</string>
+    <string name="str_question_type_true_false">True False</string>
+    <string name="str_grade_1">Grade One</string>
+    <string name="str_grade_2">Grade Two</string>
+    <string name="str_grade_3">Grade Three</string>
+    <string name="str_grade_4">Grade Four</string>
+    <string name="str_true">True Answer</string>
+    <string name="str_false">False Answer</string>
+
+    <string name="str_grade_header">Select Grade</string>
+    <string name="str_course_header">Select Course</string>
+    <string name="str_choice_hint">Enter Choice</string>
+    <string name="str_is_right_answer">Is Right</string>
+    <string name="str_choices">Choices</string>
+    <string name="str_your_answer">Your Answer</string>
+    <string name="str_choices_hint">Select Choice</string>
+    <string name="str_your_answer_hint">Type Your Answer</string>
+    <string name="str_your_review">Review</string>
+    <string name="str_note">Note</string>
+    <string name="str_note_hint">Type Note</string>
+    <string name="str_review_hint">Please enter review value</string>
+
+    <string name="str_questions_counter">%s Questions</string>
+    <string name="str_questions_solved_counter">%s Solved</string>
+    <string name="str_questions_unsolved_counter">%s Unsolved</string>
+    <string name="str_questions_right_counter">%s Right</string>
+    <string name="str_questions_wrong_counter">%s Wrong</string>
+    <string name="str_questions_result">Result: %s</string>
+    <string name="str_notification_message">New Event %s at %s Register Now</string>
+</resources>
