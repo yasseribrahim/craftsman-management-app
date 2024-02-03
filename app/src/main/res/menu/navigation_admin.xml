@@ -9,17 +9,25 @@
             android:icon="@drawable/ic_menu_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_events"
-            android:icon="@drawable/ic_menu_events"
-            android:title="@string/menu_events" />
+            android:id="@+id/nav_services"
+            android:icon="@drawable/ic_menu_services"
+            android:title="@string/menu_services" />
         <item
             android:id="@+id/nav_admins"
             android:icon="@drawable/ic_menu_admin"
             android:title="@string/menu_admins" />
         <item
-            android:id="@+id/nav_students"
-            android:icon="@drawable/ic_menu_students"
-            android:title="@string/menu_students" />
+            android:id="@+id/nav_craftsman"
+            android:icon="@drawable/ic_menu_craftsman"
+            android:title="@string/menu_craftsman" />
+        <item
+            android:id="@+id/nav_clients"
+            android:icon="@drawable/ic_menu_clients"
+            android:title="@string/menu_clients" />
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_menu_categories"
+            android:title="@string/menu_categories" />
     </group>
 
     <group android:checkableBehavior="single">

@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "909092078018",
-    "firebase_url": "https://stay-at-home-app.firebaseio.com",
-    "project_id": "stay-at-home-app",
-    "storage_bucket": "stay-at-home-app.appspot.com"
+    "project_number": "587125326950",
+    "firebase_url": "https://p247-e45cb.firebaseio.com",
+    "project_id": "p247-e45cb",
+    "storage_bucket": "p247-e45cb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:909092078018:android:d2f8ad2978eae9333bd65b",
+        "mobilesdk_app_id": "1:587125326950:android:5e5f62972ae3b5595ed9a7",
         "android_client_info": {
-          "package_name": "com.orders.management.app"
+          "package_name": "com.craftsman.management.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "909092078018-vq62b1qj8lhrr6ul8sl1ii3gf1coqp25.apps.googleusercontent.com",
+          "client_id": "587125326950-ggk1dh7b5drvj844t8v6dbfqoma1o7o1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBQ0K4UbdBkjWOUrGO0hR9v5MbHTiunbro"
+          "current_key": "AIzaSyDLRFJC1ZW46yk3-Ey92g_xQ5j_-Uz2F3w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "909092078018-vq62b1qj8lhrr6ul8sl1ii3gf1coqp25.apps.googleusercontent.com",
+              "client_id": "587125326950-ggk1dh7b5drvj844t8v6dbfqoma1o7o1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

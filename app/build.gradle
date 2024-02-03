@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.orders.management.app'
+    namespace 'com.craftsman.management.app'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.orders.management.app"
+        applicationId "com.craftsman.management.app"
         minSdk 24
         targetSdk 34
         versionCode 1

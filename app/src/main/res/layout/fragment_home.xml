@@ -51,7 +51,7 @@
             android:weightSum="2">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/container_teachers"
+                android:id="@+id/container_admins"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -89,7 +89,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/container_students"
+                android:id="@+id/container_craftsman"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -105,7 +105,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/students_counter"
+                        android:id="@+id/craftsman_counter"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="00"
@@ -117,7 +117,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/menu_students"
+                        android:text="@string/menu_craftsman"
                         android:textStyle="bold"
                         android:textColor="@color/home_color2"
                         android:textSize="20sp"
@@ -135,7 +135,91 @@
             android:weightSum="2">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/container_questions"
+                android:id="@+id/container_clients"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/clients_counter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textStyle="bold"
+                        android:textSize="50sp"
+                        android:textColor="@color/home_color3"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_clients"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/home_color3"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/categories_counter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textStyle="bold"
+                        android:textSize="50sp"
+                        android:textColor="@color/home_color4"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_categories"
+                        android:textStyle="bold"
+                        android:textColor="@color/home_color4"
+                        android:textSize="20sp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container_services"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -151,7 +235,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/questions_counter"
+                        android:id="@+id/services_counter"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="00"
@@ -163,7 +247,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/menu_events"
+                        android:text="@string/menu_services"
                         android:textStyle="bold"
                         android:textColor="@color/home_color5"
                         android:textSize="20sp"

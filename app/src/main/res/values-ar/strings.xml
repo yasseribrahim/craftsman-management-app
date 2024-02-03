@@ -10,14 +10,16 @@
 
     <string name="menu_home">الصفحة الرئيسية</string>
     <string name="menu_admins">المديرون</string>
-    <string name="menu_events">الفاعليات</string>
-    <string name="menu_events_accepted">الأحداث مقبولة</string>
-    <string name="menu_events_created">فاعلياتي</string>
+    <string name="menu_services">الخدمات</string>
+    <string name="menu_services_accepted">خدماتى المقبولة</string>
+    <string name="menu_services_created">خدماتى</string>
     <string name="menu_notifications">الاشعارات</string>
     <string name="menu_correction">تصحيح</string>
     <string name="menu_units">الوحدات</string>
     <string name="menu_lessons">الدروس</string>
-    <string name="menu_students">الطلاب</string>
+    <string name="menu_craftsman">الحرفيين</string>
+    <string name="menu_clients">العملاء</string>
+    <string name="menu_categories">الفئات</string>
     <string name="menu_courses">الدورات</string>
     <string name="menu_exams">الامتحانات</string>
     <string name="menu_questions">سؤال</string>
@@ -58,6 +60,10 @@
     <string name="str_delete">حذف</string>
     <string name="str_add_new">إضافة جديد</string>
     <string name="str_review">تقييم</string>
+    <string name="str_chat">مراسلة</string>
+    <string name="str_add_price">إضافة سعر</string>
+    <string name="str_prices">%s (سعر \ اسعار)</string>
+    <string name="str_prices_title">الاسعار</string>
     <string name="str_search_hint">بحث</string>
     <string name="str_registration">التسجيل</string>
     <string name="str_forget_password"><u>نسيت كلمة المرور</u></string>
@@ -92,7 +98,7 @@
     <string name="str_question_list_empty">الرجاء تحديد الصف والدورة أولا</string>
 
     <string name="str_register_users">الحضور</string>
-    <string name="str_title_event">سؤال</string>
+    <string name="str_title_service">خدمة</string>
     <string name="str_title">العنوان</string>
     <string name="str_title_hint">أدخل العنوان</string>
     <string name="str_date">التاريخ</string>
@@ -133,6 +139,7 @@
 
     <string name="str_more_profile">الملف الشخصي</string>
     <string name="str_more_about">حول</string>
+    <string name="str_more_contacts">التواصل &amp; الوصف </string>
     <string name="str_more_app_info">معلومات التطبيق</string>
     <string name="str_more_change_language">تغيير اللغة</string>
     <string name="str_more_language">العربية</string>
@@ -187,4 +194,7 @@
     <string name="str_questions_wrong_counter">%s خطأ</string>
     <string name="str_questions_result">النتيجة: %s</string>
     <string name="str_notification_message">حدث جديد %s في %s سجل الآن</string>
+
+    <string name="str_category">النوع</string>
+    <string name="str_category_hint">اختر النوع</string>
 </resources>

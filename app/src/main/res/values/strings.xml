@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Orders Management</string>
+    <string name="app_name" translatable="false">Craftsman Management</string>
     <string name="str_welcome_message">Welcome: %s</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -10,14 +10,16 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_admins">Admins</string>
-    <string name="menu_events">Events</string>
-    <string name="menu_events_accepted">Events Accepted</string>
-    <string name="menu_events_created">My Events</string>
+    <string name="menu_services">Services</string>
+    <string name="menu_services_accepted">Services Accepted</string>
+    <string name="menu_services_created">My Services</string>
     <string name="menu_notifications">Notifications</string>
     <string name="menu_correction">Correction</string>
     <string name="menu_units">Units</string>
     <string name="menu_lessons">Lessons</string>
-    <string name="menu_students">Students</string>
+    <string name="menu_craftsman">Craftsman</string>
+    <string name="menu_clients">Clients</string>
+    <string name="menu_categories">Categories</string>
     <string name="menu_courses">Courses</string>
     <string name="menu_exams">Exams</string>
     <string name="menu_questions">Questions</string>
@@ -58,6 +60,10 @@
     <string name="str_delete">Delete</string>
     <string name="str_add_new">Add New</string>
     <string name="str_review">Review</string>
+    <string name="str_chat">Chat</string>
+    <string name="str_add_price">Add Price</string>
+    <string name="str_prices">%s Price(s)</string>
+    <string name="str_prices_title">Prices</string>
     <string name="str_search_hint">Search</string>
     <string name="str_registration">Registration</string>
     <string name="str_forget_password"><u>Forget Password</u></string>
@@ -92,7 +98,7 @@
     <string name="str_questions_list_hint">Please Select List Of Questions</string>
     <string name="str_question_list_empty">Please select Grade and Course firstly</string>
 
-    <string name="str_title_event">Event</string>
+    <string name="str_title_service">Service</string>
     <string name="str_title">Title</string>
     <string name="str_register_users">User Register</string>
     <string name="str_title_hint">Enter Title</string>
@@ -133,6 +139,7 @@
 
     <string name="str_more_profile">Profile</string>
     <string name="str_more_about">About</string>
+    <string name="str_more_contacts">Contacts &amp; Description</string>
     <string name="str_more_app_info">App Info</string>
     <string name="str_more_change_language">Change Language</string>
     <string name="str_more_language">العربية</string>
@@ -185,4 +192,7 @@
     <string name="str_questions_wrong_counter">%s Wrong</string>
     <string name="str_questions_result">Result: %s</string>
     <string name="str_notification_message">New Event %s at %s Register Now</string>
+
+    <string name="str_category">Category</string>
+    <string name="str_category_hint">Select Category</string>
 </resources>
