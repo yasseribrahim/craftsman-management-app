@@ -207,47 +207,86 @@
                 android:textColor="@color/black_light"
                 android:textStyle="bold" />
 
+            <LinearLayout
+                android:id="@+id/container_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/border_background"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/str_date_hint"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="5dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_date" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="@null"
+                android:text="@string/str_accepted_price"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <LinearLayout
+                    android:id="@+id/container_accepted_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:background="@drawable/border_background"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-                    <LinearLayout
-                        android:id="@+id/container_date"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/accepted_price"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/border_background"
-                        android:orientation="horizontal"
-                        android:padding="5dp">
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/str_empty_data"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/green" />
 
-                        <TextView
-                            android:id="@+id/date"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@null"
-                            android:hint="@string/str_date_hint"
-                            android:paddingStart="5dp"
-                            android:paddingTop="5dp"
-                            android:paddingEnd="20dp"
-                            android:paddingBottom="5dp" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/ic_date" />
-                    </LinearLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_price"
+                        app:tint="@color/green" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/btn_save"
