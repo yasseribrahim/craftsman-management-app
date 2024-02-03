@@ -8,7 +8,7 @@ public class DatesUtils {
     private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
     private final static SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("hh:mm a");
     public static String formatDate(Date date) {
-        return FORMAT.format(date);
+        return date != null ? FORMAT.format(date) : "";
     }
     public static String formatDateOnly(Date date) {
         return DATE_FORMAT.format(date);

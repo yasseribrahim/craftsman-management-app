@@ -62,6 +62,7 @@
     <string name="str_review">تقييم</string>
     <string name="str_chat">مراسلة</string>
     <string name="str_add_price">إضافة سعر</string>
+    <string name="str_accepted_price">السعر المقبول</string>
     <string name="str_prices">%s (سعر \ اسعار)</string>
     <string name="str_prices_title">الاسعار</string>
     <string name="str_search_hint">بحث</string>
@@ -193,7 +194,7 @@
     <string name="str_questions_right_counter">%s صحيح</string>
     <string name="str_questions_wrong_counter">%s خطأ</string>
     <string name="str_questions_result">النتيجة: %s</string>
-    <string name="str_notification_message">حدث جديد %s في %s سجل الآن</string>
+    <string name="str_notification_message">خدمة جديدة %s في %s سجل الآن</string>
 
     <string name="str_category">النوع</string>
     <string name="str_category_hint">اختر النوع</string>

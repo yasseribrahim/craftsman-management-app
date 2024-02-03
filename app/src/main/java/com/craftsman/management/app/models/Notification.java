@@ -9,7 +9,7 @@ public class Notification implements Parcelable {
     private String id;
     private String message;
     private long timestamp;
-    private String eventId;
+    private String serviceId;
     public Notification() {
         timestamp = Calendar.getInstance().getTimeInMillis();
     }
@@ -38,17 +38,17 @@ public class Notification implements Parcelable {
         this.timestamp = timestamp;
     }
 
-    public String getEventId() {
-        return eventId;
+    public String getServiceId() {
+        return serviceId;
     }
 
-    public void setEventId(String eventId) {
-        this.eventId = eventId;
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
     }
 
     @Override
     public String toString() {
-        return "Notification{" + "message='" + message + '\'' + ", timestamp=" + timestamp + ", location='" + eventId + '\'' + '}';
+        return "Notification{" + "message='" + message + '\'' + ", timestamp=" + timestamp + ", location='" + serviceId + '\'' + '}';
     }
 
     @Override
@@ -61,21 +61,21 @@ public class Notification implements Parcelable {
         dest.writeString(this.id);
         dest.writeString(this.message);
         dest.writeLong(this.timestamp);
-        dest.writeString(this.eventId);
+        dest.writeString(this.serviceId);
     }
 
     public void readFromParcel(Parcel source) {
         this.id = source.readString();
         this.message = source.readString();
         this.timestamp = source.readLong();
-        this.eventId = source.readString();
+        this.serviceId = source.readString();
     }
 
     protected Notification(Parcel in) {
         this.id = in.readString();
         this.message = in.readString();
         this.timestamp = in.readLong();
-        this.eventId = in.readString();
+        this.serviceId = in.readString();
     }
 
     public static final Creator<Notification> CREATOR = new Creator<Notification>() {

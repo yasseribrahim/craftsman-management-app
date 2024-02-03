@@ -30,7 +30,7 @@ public class ServicesPresenter implements BasePresenter {
     public void save(Service service) {
         callback.onHideLoading();
         if (service.getId() == null) {
-            service.setId("event-" + System.currentTimeMillis());
+            service.setId("service-" + System.currentTimeMillis());
         }
         reference.child(service.getId()).setValue(service).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

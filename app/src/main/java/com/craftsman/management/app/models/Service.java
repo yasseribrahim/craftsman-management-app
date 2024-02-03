@@ -77,6 +77,7 @@ public class Service implements Parcelable {
     }
 
     public List<Price> getPrices() {
+        prices = prices != null ? prices : new ArrayList<>();
         return prices;
     }
 

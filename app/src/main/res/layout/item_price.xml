@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_layout"
     style="@style/ListItem"
     android:layout_height="wrap_content"
@@ -69,56 +70,85 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
         android:drawableStart="@drawable/ic_price"
         android:drawableTint="@color/colorSecondaryVariant"
-        android:layout_margin="10dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="16sp"
         android:textStyle="bold"
         tools:text="Price" />
 
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:drawableStart="@drawable/ic_time"
+        android:drawablePadding="3dp"
+        android:drawableTint="@color/gray_dark"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gray_dark"
+        tools:text="Date" />
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:orientation="horizontal">
 
-        <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/accepted"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:checked="true"
-            android:text="@string/str_accept" />
-
         <TextView
-            android:id="@+id/date"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:drawableStart="@drawable/ic_time"
-            android:drawableTint="@color/gray_dark"
-            android:drawablePadding="3dp"
-            android:gravity="center_vertical"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/gray_dark"
-            tools:text="Date" />
-
-        <TextView
-            android:id="@+id/btn_chat"
+            android:id="@+id/btn_accepted"
             style="@style/CustomButtonAccent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="0dp"
             android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="0dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/str_accept"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/accepted_flag"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_accepted_flag"
+            app:tint="@color/green"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_chat"
+            style="@style/CustomButtonPrimaryOutline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="0dp"
             android:paddingStart="30dp"
             android:paddingEnd="30dp"
             android:text="@string/str_chat"
-            android:textColor="@color/white"/>
+            android:textColor="@color/colorPrimary" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View style="@style/SeparateHorizontalView" />

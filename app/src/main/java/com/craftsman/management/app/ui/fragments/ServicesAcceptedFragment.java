@@ -21,6 +21,7 @@ import com.craftsman.management.app.databinding.FragmentServicesAcceptedBinding;
 import com.craftsman.management.app.models.Service;
 import com.craftsman.management.app.persenters.service.ServicesCallback;
 import com.craftsman.management.app.persenters.service.ServicesPresenter;
+import com.craftsman.management.app.ui.activities.ServiceActivity;
 import com.craftsman.management.app.ui.adptres.ServicesAdapter;
 import com.craftsman.management.app.utilities.helpers.StorageHelper;
 
@@ -101,12 +102,7 @@ public class ServicesAcceptedFragment extends Fragment implements ServicesCallba
     @Override
     public void onGetServicesComplete(List<Service> services) {
         this.services.clear();
-        var currentEvents = StorageHelper.getCurrentUser().getServices();
-        for (var event : services) {
-            if (currentEvents.contains(event.getId())) {
-                this.services.add(event);
-            }
-        }
+        this.services.addAll(services);
         search(binding.textSearch.getText().toString());
     }
 
@@ -159,7 +155,7 @@ public class ServicesAcceptedFragment extends Fragment implements ServicesCallba
 
     @Override
     public void onServiceViewListener(Service service) {
-        Intent intent = new Intent(getContext(), ServiceViewerActivity.class);
+        Intent intent = new Intent(getContext(), ServiceActivity.class);
         intent.putExtra(Constants.ARG_OBJECT, service);
         startActivity(intent);
     }

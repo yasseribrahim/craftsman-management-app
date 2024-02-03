@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.bumptech.glide.Glide;
 import com.craftsman.management.app.Constants;
@@ -20,7 +19,6 @@ import com.craftsman.management.app.databinding.ActivityServiceBinding;
 import com.craftsman.management.app.models.Category;
 import com.craftsman.management.app.models.ChatId;
 import com.craftsman.management.app.models.Notification;
-import com.craftsman.management.app.models.Price;
 import com.craftsman.management.app.models.Service;
 import com.craftsman.management.app.models.User;
 import com.craftsman.management.app.persenters.notification.NotificationsCallback;
@@ -29,9 +27,7 @@ import com.craftsman.management.app.persenters.service.ServicesCallback;
 import com.craftsman.management.app.persenters.service.ServicesPresenter;
 import com.craftsman.management.app.persenters.user.UsersCallback;
 import com.craftsman.management.app.persenters.user.UsersPresenter;
-import com.craftsman.management.app.ui.adptres.PricesAdapter;
 import com.craftsman.management.app.ui.fragments.CategorySelectorBottomSheetDialog;
-import com.craftsman.management.app.ui.fragments.PriceBottomSheetDialog;
 import com.craftsman.management.app.ui.fragments.ProgressDialogFragment;
 import com.craftsman.management.app.utilities.DatesUtils;
 import com.craftsman.management.app.utilities.ToastUtils;
@@ -55,14 +51,13 @@ import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 import pub.devrel.easypermissions.PermissionRequest;
 
-public class ServiceActivity extends BaseActivity implements ServicesCallback, PriceBottomSheetDialog.OnPriceChangedCallback, PricesAdapter.OnPricesClickListener, CategorySelectorBottomSheetDialog.OnCategorySelectedCallback, UsersCallback, NotificationsCallback, EasyPermissions.PermissionCallbacks, EasyPermissions.RationaleCallbacks {
+public class ServiceActivity extends BaseActivity implements ServicesCallback, CategorySelectorBottomSheetDialog.OnCategorySelectedCallback, UsersCallback, NotificationsCallback, EasyPermissions.PermissionCallbacks, EasyPermissions.RationaleCallbacks {
     private static final int REQUEST_CODE_CAMERA_AND_STORAGE = 100;
     private static final String TAG = ServiceActivity.class.getSimpleName();
     private ActivityServiceBinding binding;
     private ServicesPresenter servicesPresenter;
     private NotificationsPresenter notificationsPresenter;
     private UsersPresenter usersPresenter;
-    private PricesAdapter adapter;
     private Service service;
     private List<User> users;
     private User currentUser;
@@ -88,15 +83,18 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, P
             service.setPrices(new ArrayList<>());
         }
 
-        var canAccepted = canEdit;
-        var canChat = canEdit;
-        adapter = new PricesAdapter(service.getPrices(), this, canChat, canAccepted);
-        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        binding.recyclerView.setAdapter(adapter);
-
         bind();
 
         users = new ArrayList<>();
+
+        binding.btnPrices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ServiceActivity.this, ServicePricesActivity.class);
+                intent.putExtra(Constants.ARG_OBJECT, service);
+                startActivity(intent);
+            }
+        });
 
         if (canEdit) {
             binding.image.setOnClickListener(new View.OnClickListener() {
@@ -170,31 +168,19 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, P
                     }
                 }
             });
-
-            binding.btnAddPrice.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Price price = new Price("", currentUser.getUsername(), 0, Calendar.getInstance().getTime(), false);
-                    int index = service.getPrices() != null ? service.getPrices().indexOf(price) : -1;
-                    if (index != -1) {
-                        price = service.getPrices().get(index);
-                    }
-                    PriceBottomSheetDialog dialog = PriceBottomSheetDialog.newInstance(service, price);
-                    dialog.show(getSupportFragmentManager(), "");
-                }
-            });
         }
-    }
-
-    @Override
-    public void onPriceChangedCallback(Service service) {
-        this.service = service;
-        bind();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        servicesPresenter.getService(service.getId());
+    }
+
+    @Override
+    public void onGetServiceComplete(Service service) {
+        this.service = service;
+        bind();
         usersPresenter.getUsers(0);
     }
 
@@ -209,7 +195,7 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, P
         Toast.makeText(this, R.string.str_message_added_successfully, Toast.LENGTH_LONG).show();
         Notification notification = new Notification();
         notification.setMessage(getString(R.string.str_notification_message, service.getTitle(), DatesUtils.formatDate(service.getDate())));
-        notification.setEventId(service.getId());
+        notification.setServiceId(service.getId());
         if (StorageHelper.getCurrentUser().isAdmin()) {
             notificationsPresenter.save(notification, users);
         } else {
@@ -382,7 +368,6 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, P
         binding.title.setEnabled(canEdit);
         binding.description.setEnabled(canEdit);
         binding.btnSave.setVisibility(canEdit ? View.VISIBLE : View.GONE);
-        binding.btnAddPrice.setVisibility(currentUser.isCraftsman() ? View.VISIBLE : View.GONE);
         binding.btnChat.setVisibility(currentUser.isCraftsman() ? View.VISIBLE : View.GONE);
 
         binding.username.setText(service.getCreatedBy());
@@ -390,12 +375,13 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, P
         binding.description.setText(service.getDescription());
         binding.category.setText(service.getCategoryName());
         binding.date.setText(DatesUtils.formatDate(service.getDate()));
+        if (service.getAcceptedPrices() != null) {
+            binding.acceptedPrice.setText(service.getAcceptedPrices().getPrice() + "");
+        }
         Glide.with(this).load(service.getImageUrl()).placeholder(R.drawable.default_image).into(binding.image);
         if (service.getId() != null) {
             selectedCategory = new Category(service.getCategoryId(), service.getCategoryName());
         }
-
-        adapter.notifyDataSetChanged();
     }
 
     @Override
@@ -404,34 +390,5 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, P
         service.setCategoryId(category.getId());
         service.setCategoryName(category.getName());
         binding.category.setText(service.getCategoryName());
-    }
-
-    @Override
-    public void onPriceEditListener(Price price) {
-
-    }
-
-    @Override
-    public void onPriceDeleteListener(Price price) {
-
-    }
-
-    @Override
-    public void onPriceChatListener(Price price) {
-        var user1 = currentUser;
-        User user2 = null;
-        for (User user : users) {
-            if (user.getUsername().equalsIgnoreCase(price.getCraftsmanId())) {
-                user2 = user;
-                break;
-            }
-        }
-
-        if (user2 != null) {
-            ChatId id = new ChatId(user1, user2);
-            Intent intent = new Intent(this, MessagingActivity.class);
-            intent.putExtra(Constants.ARG_OBJECT, id);
-            startActivity(intent);
-        }
     }
 }

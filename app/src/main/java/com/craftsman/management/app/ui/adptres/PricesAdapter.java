@@ -3,6 +3,7 @@ package com.craftsman.management.app.ui.adptres;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,7 +39,8 @@ public class PricesAdapter extends RecyclerView.Adapter<PricesAdapter.ViewHolder
         holder.binding.username.setText(price.getCraftsmanId());
         holder.binding.price.setText(price.getPrice() + "");
         holder.binding.date.setText(DatesUtils.formatDate(price.getDate()));
-
+        holder.binding.btnAccepted.setVisibility(canAccepted && !price.isAccepted() ? View.VISIBLE : View.GONE);
+        holder.binding.acceptedFlag.setVisibility(price.isAccepted() ? View.VISIBLE : View.GONE);
         var canEdit = StorageHelper.getCurrentUser().getId().equalsIgnoreCase(price.getCraftsmanId());
         holder.binding.containerActions.setVisibility(canEdit ? View.VISIBLE : View.GONE);
     }
@@ -61,7 +63,17 @@ public class PricesAdapter extends RecyclerView.Adapter<PricesAdapter.ViewHolder
             super(view);
             binding = ItemPriceBinding.bind(view);
             binding.btnChat.setVisibility(canChat ? View.VISIBLE : View.GONE);
-            binding.accepted.setVisibility(canAccepted ? View.VISIBLE : View.GONE);
+            binding.btnAccepted.setVisibility(canAccepted ? View.VISIBLE : View.GONE);
+            binding.btnAccepted.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null) {
+                        var price = prices.get(getAdapterPosition());
+                        price.setAccepted(true);
+                        listener.onPriceAcceptedListener(price);
+                    }
+                }
+            });
             binding.containerRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -91,6 +103,8 @@ public class PricesAdapter extends RecyclerView.Adapter<PricesAdapter.ViewHolder
         void onPriceEditListener(Price price);
 
         void onPriceDeleteListener(Price price);
+
+        void onPriceAcceptedListener(Price price);
 
         void onPriceChatListener(Price price);
     }

@@ -32,7 +32,7 @@ public class NotificationsPresenter implements BasePresenter {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                PushNotification pushNotification = new PushNotification(notification.getEventId(), notification.getMessage());
+                PushNotification pushNotification = new PushNotification(notification.getServiceId(), notification.getMessage());
                 for (User user : users) {
                     reference.child(user.getId()).push().setValue(pushNotification);
                 }

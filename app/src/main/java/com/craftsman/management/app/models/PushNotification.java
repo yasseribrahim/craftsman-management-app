@@ -5,7 +5,7 @@ import com.google.firebase.database.ServerValue;
 import java.util.Map;
 
 public class PushNotification {
-    private String eventId;
+    private String serviceId;
     private String message;
     private Map<String, String> timestamp;
 
@@ -13,18 +13,18 @@ public class PushNotification {
         this.timestamp = ServerValue.TIMESTAMP;
     }
 
-    public PushNotification(String eventId, String message) {
-        this.eventId = eventId;
+    public PushNotification(String serviceId, String message) {
+        this.serviceId = serviceId;
         this.message = message;
         this.timestamp = ServerValue.TIMESTAMP;
     }
 
-    public String getEventId() {
-        return eventId;
+    public String getServiceId() {
+        return serviceId;
     }
 
-    public void setEventId(String eventId) {
-        this.eventId = eventId;
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
     }
 
     public String getMessage() {
@@ -46,7 +46,7 @@ public class PushNotification {
     @Override
     public String toString() {
         return "PushNotification{" +
-                "location='" + eventId + '\'' +
+                "location='" + serviceId + '\'' +
                 ", message='" + message + '\'' +
                 ", timestamp=" + timestamp +
                 '}';

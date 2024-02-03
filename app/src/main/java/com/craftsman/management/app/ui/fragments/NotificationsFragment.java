@@ -20,6 +20,7 @@ import com.craftsman.management.app.models.Service;
 import com.craftsman.management.app.models.Notification;
 import com.craftsman.management.app.persenters.notification.NotificationsCallback;
 import com.craftsman.management.app.persenters.notification.NotificationsPresenter;
+import com.craftsman.management.app.ui.activities.ServiceActivity;
 import com.craftsman.management.app.ui.adptres.NotificationsAdapter;
 import com.craftsman.management.app.R;
 import com.craftsman.management.app.databinding.FragmentNotificationsBinding;
@@ -122,10 +123,10 @@ public class NotificationsFragment extends Fragment implements NotificationsCall
 
     @Override
     public void onItemViewListener(Notification notification) {
-        var event = new Service();
-        event.setId(notification.getEventId());
-        Intent intent = new Intent(getContext(), ServiceViewerActivity.class);
-        intent.putExtra(Constants.ARG_OBJECT, event);
+        var service = new Service();
+        service.setId(notification.getServiceId());
+        Intent intent = new Intent(getContext(), ServiceActivity.class);
+        intent.putExtra(Constants.ARG_OBJECT, service);
         startActivity(intent);
     }
 
