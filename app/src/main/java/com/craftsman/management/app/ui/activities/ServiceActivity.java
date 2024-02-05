@@ -115,36 +115,32 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, C
             binding.btnSave.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (!users.isEmpty()) {
-                        String title = binding.title.getText().toString().trim();
-                        String description = binding.description.getText().toString().trim();
+                    String title = binding.title.getText().toString().trim();
+                    String description = binding.description.getText().toString().trim();
 
-                        if (selectedCategory == null) {
-                            binding.category.setError(getString(R.string.str_category_hint));
-                            return;
-                        }
-
-                        if (title.isEmpty()) {
-                            binding.title.setError(getString(R.string.str_title_hint));
-                            binding.title.requestFocus();
-                            return;
-                        }
-                        if (description.isEmpty()) {
-                            binding.description.setError(getString(R.string.str_description_hint));
-                            binding.description.requestFocus();
-                            return;
-                        }
-
-                        service.setTitle(title);
-                        service.setDescription(binding.description.getText().toString());
-                        if (service.getId() == null) {
-                            service.setCreatedBy(StorageHelper.getCurrentUser().getUsername());
-                        }
-
-                        servicesPresenter.save(service);
-                    } else {
-                        ToastUtils.longToast("Please Wait!!!");
+                    if (selectedCategory == null) {
+                        binding.category.setError(getString(R.string.str_category_hint));
+                        return;
                     }
+
+                    if (title.isEmpty()) {
+                        binding.title.setError(getString(R.string.str_title_hint));
+                        binding.title.requestFocus();
+                        return;
+                    }
+                    if (description.isEmpty()) {
+                        binding.description.setError(getString(R.string.str_description_hint));
+                        binding.description.requestFocus();
+                        return;
+                    }
+
+                    service.setTitle(title);
+                    service.setDescription(binding.description.getText().toString());
+                    if (service.getId() == null) {
+                        service.setCreatedBy(StorageHelper.getCurrentUser().getUsername());
+                    }
+
+                    servicesPresenter.save(service);
                 }
             });
         } else {
@@ -174,7 +170,9 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, C
     @Override
     protected void onResume() {
         super.onResume();
-        servicesPresenter.getService(service.getId());
+        if (service.getId() != null) {
+			servicesPresenter.getService(service.getId());
+		}
     }
 
     @Override

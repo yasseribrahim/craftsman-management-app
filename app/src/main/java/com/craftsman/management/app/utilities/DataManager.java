@@ -12,11 +12,11 @@ public class DataManager {
 
     public static void initUserAdmin() {
         User user = new User();
-        user.setId("L4dHV3ZZu8bC1YuLVhfrzY4rIZl2");
+        user.setId("oehesliVOhWCKZwVRoXqkVV3vX42");
         user.setUsername("admin@craftsman.com");
         user.setPassword("123456");
         user.setType(1);
-        NODE_USERS.child("L4dHV3ZZu8bC1YuLVhfrzY4rIZl2").setValue(user);
+        NODE_USERS.child("oehesliVOhWCKZwVRoXqkVV3vX42").setValue(user);
     }
 
     public static void initAbout() {

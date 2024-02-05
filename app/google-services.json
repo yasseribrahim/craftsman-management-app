@@ -1,37 +1,27 @@
 {
   "project_info": {
-    "project_number": "587125326950",
-    "firebase_url": "https://p247-e45cb.firebaseio.com",
-    "project_id": "p247-e45cb",
-    "storage_bucket": "p247-e45cb.appspot.com"
+    "project_number": "544587495137",
+    "firebase_url": "https://craftsman-fdb81-default-rtdb.firebaseio.com",
+    "project_id": "craftsman-fdb81",
+    "storage_bucket": "craftsman-fdb81.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:587125326950:android:5e5f62972ae3b5595ed9a7",
+        "mobilesdk_app_id": "1:544587495137:android:e29b8e0cfb60f657ca69a0",
         "android_client_info": {
           "package_name": "com.craftsman.management.app"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "587125326950-ggk1dh7b5drvj844t8v6dbfqoma1o7o1.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDLRFJC1ZW46yk3-Ey92g_xQ5j_-Uz2F3w"
+          "current_key": "AIzaSyDiJ9BfYDK82o4-shWkjs3nnlNaz5Xfnds"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "587125326950-ggk1dh7b5drvj844t8v6dbfqoma1o7o1.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
