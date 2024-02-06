@@ -1,12 +1,8 @@
 <resources>
     <string name="str_welcome_message">مرحبا: %s</string>
     <string name="str_title_add_update">إضافة / تحديث</string>
-    <string name="navigation_drawer_open">فتح درج التنقل</string>
-    <string name="navigation_drawer_close">أغلق درج التنقل</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">رأس التنقل</string>
-    <string name="action_settings">الإعدادات</string>
 
     <string name="menu_home">الصفحة الرئيسية</string>
     <string name="menu_admins">المديرون</string>
@@ -14,39 +10,16 @@
     <string name="menu_services_accepted">خدماتى المقبولة</string>
     <string name="menu_services_created">خدماتى</string>
     <string name="menu_notifications">الاشعارات</string>
-    <string name="menu_correction">تصحيح</string>
-    <string name="menu_units">الوحدات</string>
-    <string name="menu_lessons">الدروس</string>
     <string name="menu_craftsman">الحرفيين</string>
     <string name="menu_clients">العملاء</string>
     <string name="menu_categories">الفئات</string>
-    <string name="menu_courses">الدورات</string>
-    <string name="menu_exams">الامتحانات</string>
-    <string name="menu_questions">سؤال</string>
     <string name="menu_more">المزيد</string>
 
-    <string name="str_questions_solved">الأسئلة المحلولة</string>
-
-    <string name="str_exam_list">قائمة الاختبارات</string>
-    <string name="str_exams_solved_list">الاختبارات المحلولة</string>
-
-    <string name="str_course">دورة</string>
-    <string name="str_course_hint">اختر الدورة</string>
-    <string name="str_name">Name</string>
-
     <string name="str_correct_answer">الاجابة الصحيحة</string>
-    <string name="str_save_next">حفظ &amp; التالي</string>
-    <string name="str_back">الرجوع</string>
-    <string name="str_correction">تصحيح</string>
     <string name="str_save">حفظ</string>
-    <string name="str_register"></string>
-    <string name="str_unregister">الغاء التسجيل</string>
-    <string name="str_finish">انهاء</string>
     <string name="str_enter_value">أدخل القيمة</string>
-    <string name="str_invalid_entered_value">القيمة غير صالحة أو موجودة بالفعل</string>
     <string name="str_ok">نعم</string>
     <string name="str_cancel">الغاء</string>
-    <string name="str_reset">إعادة</string>
     <string name="str_message_request_camera_and_storage">يحتاج هذا التطبيق للوصول إلى الكاميرا ومساحة التخزين الخاصة بك حتى يتمكن من التقاط الصور.</string>
 
     <string name="str_message_added_successfully">تمت الإضافة بنجاح</string>
@@ -69,51 +42,26 @@
     <string name="str_registration">التسجيل</string>
     <string name="str_forget_password"><u>نسيت كلمة المرور</u></string>
     <string name="str_please_wait">الرجاء الانتظار...</string>
-    <string name="chat_edit_text_hint">اكتب رسالة...</string>
     <string name="str_please_type_message_firstly">يُرجى كتابة الرسالة أولاً</string>
 
     <string name="str_password_length_invalid">كلمة المرور ذات طول غير صالح، يجب أن تتكون كلمة المرور من 6 أرقام على الأقل</string>
     <string name="str_password_confirm_invalid">تأكيد كلمة المرور غير صالحة</string>
     <string name="str_full_name_invalid">الاسم الكامل غير صالح</string>
-    <string name="str_name_invalid">الاسم غير صالح</string>
     <string name="str_phone_invalid">الهاتف غير صالح</string>
     <string name="str_address_invalid">العنوان غير صالح</string>
-    <string name="str_grade_invalid">اختر الصف</string>
     <string name="str_signup_fail">فشل التسجيل: %s</string>
     <string name="str_save_fail">فشل الحفط: %s</string>
     <string name="str_invalid_username_or_password">اسم المستخدم أو كلمة المرور غير صالحة</string>
     <string name="str_login_successful">تم تسجيل الدخول بنجاح</string>
     <string name="str_username_invalid">اسم مستخدم غير صالح</string>
 
-    <string name="str_score_pass_formatted">نجاح %s</string>
-    <string name="str_score_total_formatted">النهائية %s</string>
-    <string name="str_questions_formatted">الاسئلة: %s</string>
-
-    <string name="str_title_exam">اختبار</string>
-    <string name="str_total_score">إجمالي النقاط</string>
-    <string name="str_total_score_hint">أدخل إجمالي النقاط</string>
-    <string name="str_pass_score">درجة النجاح</string>
-    <string name="str_pass_score_hint">أدخل درجة النجاح</string>
-    <string name="str_is_active">نشط</string>
-    <string name="str_questions_list">الأسئلة</string>
-    <string name="str_question_list_empty">الرجاء تحديد الصف والدورة أولا</string>
-
-    <string name="str_register_users">الحضور</string>
     <string name="str_title_service">خدمة</string>
     <string name="str_title">العنوان</string>
     <string name="str_title_hint">أدخل العنوان</string>
     <string name="str_date">التاريخ</string>
     <string name="str_date_hint">أدخل التاريخ</string>
-    <string name="str_time">الوقت</string>
-    <string name="str_time_hint">أدخل الوقت</string>
     <string name="str_description">الوصف</string>
-    <string name="str_location"><u>المواقع من الخرائط</u></string>
     <string name="str_description_hint">أدخل الوصف</string>
-    <string name="str_question_type">نوع السؤال</string>
-    <string name="str_question_type_hint">اختر نوع السؤال</string>
-    <string name="str_questions_list_hint">الرجاء تحديد قائمة الأسئلة</string>
-    <string name="str_question_multi_choices">الاختيارات</string>
-    <string name="str_question_multi_choices_hint">ادخل الاختيارات</string>
 
     <string name="str_username">اسم المستخدم</string>
     <string name="str_password">كلمة المرور</string>
@@ -121,14 +69,11 @@
     <string name="str_full_name">الاسم الكامل</string>
     <string name="str_phone">الهاتف</string>
     <string name="str_address">العنوان</string>
-    <string name="str_grade">الصف</string>
-    <string name="str_grade_hint">اختر الصف</string>
     <string name="str_username_hint" translatable="false">user@example.com</string>
     <string name="str_password_hint">أدخل كلمة المرور الخاصة بك</string>
     <string name="str_default_password" translatable="false">12345678</string>
     <string name="str_password_confirm_hint">أدخل تأكيد كلمة المرور</string>
     <string name="str_full_name_hint">أدخل الاسم الكامل</string>
-    <string name="str_name_hint">أدخل الاسم</string>
     <string name="str_phone_hint">أدخل الهاتف</string>
     <string name="str_address_hint">أدخل العنوان</string>
     <string name="str_email">البريد الإلكتروني</string>
@@ -163,37 +108,11 @@
     <string name="str_edit">تحرير</string>
     <string name="str_accept">مقبول</string>
 
-    <string name="str_question_type_multi_choices">الاختيارات المتعددة</string>
-    <string name="str_question_type_article">مقالى</string>
-    <string name="str_question_type_true_false">صواب خطأ</string>
-    <string name="str_true">إجابة صحيحة</string>
-    <string name="str_false">إجابة خاطئة</string>
-
-    <string name="str_grade_1">الصف الأول</string>
-    <string name="str_grade_2">الصف الثاني</string>
-    <string name="str_grade_3">الصف الثالث</string>
-    <string name="str_grade_4">الصف الرابع</string>
-
-    <string name="str_grade_header">حدد الصف</string>
-    <string name="str_course_header">حدد الدورة</string>
-    <string name="str_choice_hint">أدخل الاختيار</string>
-    <string name="str_is_right_answer">الاجابة الصحيحة</string>
-
-    <string name="str_choices">الاختيارات</string>
-    <string name="str_your_answer">إجابتك</string>
-    <string name="str_choices_hint">حدد الاختيار</string>
-    <string name="str_your_answer_hint">اكتب إجابتك</string>
     <string name="str_your_review">تقيم</string>
     <string name="str_note">ملاحظة</string>
     <string name="str_note_hint">اكتب ملاحظة</string>
     <string name="str_review_hint">الرجاء إدخال قيمة تقيم</string>
 
-    <string name="str_questions_counter">%s الأسئلة</string>
-    <string name="str_questions_solved_counter">تم حل %s</string>
-    <string name="str_questions_unsolved_counter">%s لم يتم حلها</string>
-    <string name="str_questions_right_counter">%s صحيح</string>
-    <string name="str_questions_wrong_counter">%s خطأ</string>
-    <string name="str_questions_result">النتيجة: %s</string>
     <string name="str_notification_message">خدمة جديدة %s في %s سجل الآن</string>
 
     <string name="str_category">النوع</string>

@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="ToolBarShadowStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:shadowColor">@color/shadow_color</item>
-        <item name="android:shadowDx">0</item>
-        <item name="android:shadowDy">0</item>
-        <item name="android:shadowRadius">10</item>
-    </style>
-
-    <style name="ActionItem">
-        <item name="android:textSize">14sp</item>
-        <item name="android:drawablePadding">10dp</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">10dp</item>
-    </style>
 
     <style name="CustomActionBar" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Menu">
         <item name="android:textSize">16sp</item>
@@ -29,14 +13,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:actionMenuTextAppearance">@style/CustomActionBar</item>
-    </style>
-
-    <style name="CustomButtonPrimary" parent="CustomButton">
-        <item name="android:background">@drawable/btn_primary_background</item>
-    </style>
-
-    <style name="CustomButtonOrange" parent="CustomButton">
-        <item name="android:background">@drawable/btn_orange_background</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -231,13 +207,6 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="textInputHintStyle" parent="TextAppearance.AppCompat.Medium.Inverse">
-        <item name="android:textColorHint">@color/blackTextColor</item>
-        <item name="android:textColor">@color/blackTextColor</item>
-        <item name="android:textSize">17sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="EventCardInfoLayoutContainerStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -272,16 +241,4 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="EventCardInfoDescriptionStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:lines">1</item>
-        <item name="android:layout_marginStart">10dp</item>
-        <item name="android:layout_marginEnd">10dp</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:layout_marginBottom">5dp</item>
-        <item name="android:textColor">@color/gray_dark</item>
-        <item name="android:textSize">12sp</item>
-    </style>
 </resources>
