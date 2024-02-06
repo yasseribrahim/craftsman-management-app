@@ -17,7 +17,6 @@ import com.bumptech.glide.Glide;
 import com.craftsman.management.app.R;
 import com.craftsman.management.app.databinding.ActivityHomeCraftsmanBinding;
 import com.craftsman.management.app.models.User;
-import com.craftsman.management.app.ui.fragments.HomeFragment;
 import com.craftsman.management.app.ui.fragments.MoreFragment;
 import com.craftsman.management.app.ui.fragments.NotificationsFragment;
 import com.craftsman.management.app.ui.fragments.ServicesAcceptedFragment;
@@ -51,10 +50,6 @@ public class HomeActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             switch (item.getItemId()) {
-                                case R.id.nav_home:
-                                    showFragment(HomeFragment.newInstance(), R.id.container);
-                                    binding.content.toolbar.setTitle(R.string.menu_home);
-                                    break;
                                 case R.id.nav_services:
                                     showFragment(ServicesFragment.newInstance(), R.id.container);
                                     binding.content.toolbar.setTitle(R.string.menu_services);
@@ -86,8 +81,8 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         binding.navigationView.setCheckedItem(R.id.nav_home);
-        showFragment(HomeFragment.newInstance(), R.id.container);
-        binding.content.toolbar.setTitle(R.string.menu_home);
+        showFragment(ServicesFragment.newInstance(), R.id.container);
+        binding.content.toolbar.setTitle(R.string.menu_services);
 
         CircleImageView profileImage = binding.navigationView.getHeaderView(0).findViewById(R.id.profile_image);
         TextView name = binding.navigationView.getHeaderView(0).findViewById(R.id.full_name);
