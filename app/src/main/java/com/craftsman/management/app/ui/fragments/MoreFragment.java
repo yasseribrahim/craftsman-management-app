@@ -74,26 +74,26 @@ public class MoreFragment extends Fragment {
             }
         });
 
-        binding.containerLanguage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(CustomApplication.getApplication());
-                try {
-                    String language = preferences.getString("language", Locale.getDefault().getLanguage());
-                    if ("en".equalsIgnoreCase(language)) {
-                        language = "ar";
-                    } else {
-                        language = "en";
-                    }
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("language", language);
-                    editor.apply();
-                    startActivity(new Intent(getContext(), SplashActivity.class));
-                    getActivity().finishAffinity();
-                } catch (Exception ex) {
-                }
-            }
-        });
+//        binding.containerLanguage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(CustomApplication.getApplication());
+//                try {
+//                    String language = preferences.getString("language", Locale.getDefault().getLanguage());
+//                    if ("en".equalsIgnoreCase(language)) {
+//                        language = "ar";
+//                    } else {
+//                        language = "en";
+//                    }
+//                    SharedPreferences.Editor editor = preferences.edit();
+//                    editor.putString("language", language);
+//                    editor.apply();
+//                    startActivity(new Intent(getContext(), SplashActivity.class));
+//                    getActivity().finishAffinity();
+//                } catch (Exception ex) {
+//                }
+//            }
+//        });
         return root;
     }
 

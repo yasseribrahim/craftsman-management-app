@@ -102,7 +102,9 @@ public class ServicesPresenter implements BasePresenter {
                 List<Service> services = new ArrayList<>();
                 for (var child : snapshot.getChildren()) {
                     var service = child.getValue(Service.class);
-                    services.add(service);
+                    if(!service.isAccepted()) {
+                        services.add(service);
+                    }
                 }
 
                 if (callback != null) {

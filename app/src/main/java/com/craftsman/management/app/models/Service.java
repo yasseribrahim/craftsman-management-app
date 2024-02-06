@@ -109,6 +109,10 @@ public class Service implements Parcelable {
         return acceptedPrices;
     }
 
+    public boolean isAccepted() {
+        return acceptedPrices != null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
