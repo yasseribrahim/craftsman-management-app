@@ -1,10 +1,11 @@
 package com.craftsman.management.app.utilities;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.craftsman.management.app.Constants;
+import com.craftsman.management.app.R;
 import com.craftsman.management.app.models.About;
 import com.craftsman.management.app.models.User;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DataManager {
     public static final FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -18,6 +19,57 @@ public class DataManager {
         user.setType(1);
         NODE_USERS.child("oehesliVOhWCKZwVRoXqkVV3vX42").setValue(user);
     }
+
+    int[] resources = new int[]{
+            R.layout.activity_about,
+            R.layout.activity_about_edit,
+            R.layout.activity_forget_password,
+            R.layout.activity_grade_details,
+            R.layout.activity_home_admin,
+            R.layout.activity_home_client,
+            R.layout.activity_home_craftsman,
+            R.layout.activity_login,
+            R.layout.activity_messaging,
+            R.layout.activity_profile,
+            R.layout.activity_profile_edit,
+            R.layout.activity_registers,
+            R.layout.activity_registration,
+            R.layout.activity_reviews,
+            R.layout.activity_service,
+            R.layout.activity_service_prices,
+            R.layout.activity_splash,
+            R.layout.activity_user,
+            R.layout.bottom_sheet_review,
+            R.layout.content_home,
+            R.layout.fragment_bottom_sheet_category_selector,
+            R.layout.fragment_bottom_sheet_dialog_price,
+            R.layout.fragment_categories,
+            R.layout.fragment_contacts_bottom_sheet_dialog,
+            R.layout.fragment_craftsmans,
+            R.layout.fragment_grades,
+            R.layout.fragment_home,
+            R.layout.fragment_more,
+            R.layout.fragment_notifications,
+            R.layout.fragment_services,
+            R.layout.fragment_services_created,
+            R.layout.fragment_users,
+            R.layout.item_category,
+            R.layout.item_category_selector,
+            R.layout.item_chat,
+            R.layout.item_chat_other,
+            R.layout.item_craftsman,
+            R.layout.item_event_viewer,
+            R.layout.item_notification,
+            R.layout.item_price,
+            R.layout.item_register,
+            R.layout.item_review,
+            R.layout.item_service,
+            R.layout.item_student,
+            R.layout.item_user,
+            R.layout.layout_app_bar,
+            R.layout.layout_loading,
+            R.layout.nav_header_main,
+    };
 
     public static void initAbout() {
         About aboutEn = new About();
