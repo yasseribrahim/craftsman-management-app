@@ -87,9 +87,6 @@
     <string name="str_more_profile">Profile</string>
     <string name="str_more_about">About</string>
     <string name="str_more_contacts">Contacts &amp; Description</string>
-    <string name="str_more_app_info">App Info</string>
-    <string name="str_more_change_language">Change Language</string>
-    <string name="str_more_language">العربية</string>
     <string name="str_more_logout">Logout</string>
 
     <string name="str_about_content">Content:</string>

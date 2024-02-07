@@ -48,12 +48,6 @@ public class MoreFragment extends Fragment {
         binding.containerAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MoreFragment.this.getContext(), SplashActivity.class));
-            }
-        });
-        binding.containerAppInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 startActivity(new Intent(MoreFragment.this.getContext(), AboutActivity.class));
             }
         });

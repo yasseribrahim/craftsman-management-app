@@ -24,15 +24,18 @@ public class AboutPresenter implements BasePresenter {
     }
 
     public void save(About about, String language) {
+        callback.onShowLoading();
         reference.child(language).setValue(about).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 callback.onSaveAboutComplete();
+                callback.onHideLoading();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 callback.onFailure(e.getMessage(), null);
+                callback.onHideLoading();
             }
         });
     }
@@ -49,6 +52,7 @@ public class AboutPresenter implements BasePresenter {
                 if (callback != null) {
                     callback.onGetAboutComplete(about);
                 }
+                callback.onHideLoading();
             }
 
             @Override

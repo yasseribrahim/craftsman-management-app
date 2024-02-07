@@ -86,9 +86,6 @@
     <string name="str_more_profile">الملف الشخصي</string>
     <string name="str_more_about">حول</string>
     <string name="str_more_contacts">التواصل &amp; الوصف </string>
-    <string name="str_more_app_info">معلومات التطبيق</string>
-    <string name="str_more_change_language">تغيير اللغة</string>
-    <string name="str_more_language">العربية</string>
     <string name="str_more_logout">تسجيل الخروج</string>
 
     <string name="str_about_content">المحتوى:</string>
