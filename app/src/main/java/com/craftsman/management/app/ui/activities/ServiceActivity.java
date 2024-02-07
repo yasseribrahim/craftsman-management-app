@@ -366,7 +366,9 @@ public class ServiceActivity extends BaseActivity implements ServicesCallback, C
         binding.title.setEnabled(canEdit);
         binding.description.setEnabled(canEdit);
         binding.btnSave.setVisibility(canEdit ? View.VISIBLE : View.GONE);
-        binding.btnChat.setVisibility(currentUser.isCraftsman() ? View.VISIBLE : View.GONE);
+
+        binding.btnChat.setVisibility(!service.isAccepted() && currentUser.isCraftsman() ? View.VISIBLE : View.GONE);
+        binding.btnPrices.setVisibility(!service.isAccepted() ? View.VISIBLE : View.GONE);
 
         binding.username.setText(service.getCreatedBy());
         binding.title.setText(service.getTitle());

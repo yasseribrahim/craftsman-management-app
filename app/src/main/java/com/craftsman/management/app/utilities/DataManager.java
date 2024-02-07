@@ -46,7 +46,6 @@ public class DataManager {
             R.layout.fragment_contacts_bottom_sheet_dialog,
             R.layout.fragment_craftsmans,
             R.layout.fragment_grades,
-            R.layout.fragment_home,
             R.layout.fragment_more,
             R.layout.fragment_notifications,
             R.layout.fragment_services,

@@ -102,7 +102,7 @@ public class ServicesPresenter implements BasePresenter {
                 List<Service> services = new ArrayList<>();
                 for (var child : snapshot.getChildren()) {
                     var service = child.getValue(Service.class);
-                    if(!service.isAccepted()) {
+                    if(StorageHelper.getCurrentUser().isAdmin() || !service.isAccepted()) {
                         services.add(service);
                     }
                 }

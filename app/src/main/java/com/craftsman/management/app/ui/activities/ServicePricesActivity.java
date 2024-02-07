@@ -143,7 +143,7 @@ public class ServicePricesActivity extends BaseActivity implements ServicesCallb
     }
 
     private void bind() {
-        binding.btnAddPrice.setVisibility(currentUser.isCraftsman() ? View.VISIBLE : View.GONE);
+        binding.btnAddPrice.setVisibility(!service.isAccepted() && currentUser.isCraftsman() ? View.VISIBLE : View.GONE);
         binding.btnChat.setVisibility(currentUser.isCraftsman() ? View.VISIBLE : View.GONE);
 
         binding.username.setText(service.getCreatedBy());

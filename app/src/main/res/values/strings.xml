@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Craftsman Management</string>
-    <string name="str_welcome_message">Welcome: %s</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
 

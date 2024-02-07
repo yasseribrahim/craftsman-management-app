@@ -80,7 +80,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        binding.navigationView.setCheckedItem(R.id.nav_home);
+        binding.navigationView.setCheckedItem(R.id.nav_services);
         showFragment(ServicesFragment.newInstance(), R.id.container);
         binding.content.toolbar.setTitle(R.string.menu_services);
 

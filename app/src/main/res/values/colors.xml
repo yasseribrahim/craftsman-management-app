@@ -28,12 +28,6 @@
     <color name="item_chat_bg">@color/colorPrimary</color>
     <color name="item_chat_other_bg">#e1e1e1</color>
 
-    <color name="home_color1">#019DCD</color>
-    <color name="home_color2">#8CAD4A</color>
-    <color name="home_color3">#F47224</color>
-    <color name="home_color4">#94257F</color>
-    <color name="home_color5">#FF3B30</color>
-
     <color name="profilePrimaryDark">#FF3B30</color>
     <color name="profileAccentColor">#F7F7F7</color>
     <color name="blackTextColor">#000</color>
