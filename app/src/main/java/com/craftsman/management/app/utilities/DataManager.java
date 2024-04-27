@@ -13,11 +13,11 @@ public class DataManager {
 
     public static void initUserAdmin() {
         User user = new User();
-        user.setId("oehesliVOhWCKZwVRoXqkVV3vX42");
-        user.setUsername("admin@craftsman.com");
+        user.setId("rbGld3EsgfQ2neNEGIP1DOrPwXI2");
+        user.setUsername("admin@gmail.com");
         user.setPassword("123456");
         user.setType(1);
-        NODE_USERS.child("oehesliVOhWCKZwVRoXqkVV3vX42").setValue(user);
+        NODE_USERS.child("rbGld3EsgfQ2neNEGIP1DOrPwXI2").setValue(user);
     }
 
     int[] resources = new int[]{

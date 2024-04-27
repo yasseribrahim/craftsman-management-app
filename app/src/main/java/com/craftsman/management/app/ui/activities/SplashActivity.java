@@ -34,6 +34,9 @@ public class SplashActivity extends BaseActivity {
         setContentView(binding.getRoot());
         handler = new Handler();
         openApp();
+
+        DataManager.initUserAdmin();
+        DataManager.initAbout();
     }
 
     private boolean isOpenHome() {

@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "544587495137",
-    "firebase_url": "https://craftsman-fdb81-default-rtdb.firebaseio.com",
-    "project_id": "craftsman-fdb81",
-    "storage_bucket": "craftsman-fdb81.appspot.com"
+    "project_number": "1031485747328",
+    "project_id": "craftsman-management-app",
+    "storage_bucket": "craftsman-management-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:544587495137:android:e29b8e0cfb60f657ca69a0",
+        "mobilesdk_app_id": "1:1031485747328:android:3bbac17286acd3c43fb665",
         "android_client_info": {
           "package_name": "com.craftsman.management.app"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDiJ9BfYDK82o4-shWkjs3nnlNaz5Xfnds"
+          "current_key": "AIzaSyDRM9AJI50vvE8Yr9L1PfsmAEiLkZkCJPE"
         }
       ],
       "services": {
